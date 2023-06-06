@@ -1,3 +1,20 @@
+---
+const navItems = [
+	{
+		path: '/shop',
+		label: 'Shop',
+	},
+	{
+		path: '/blog',
+		label: 'blog',
+	},
+	{
+		path: '/about',
+		label: 'about',
+	},
+];
+---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -7,7 +24,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700;900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700;900&family=Permanent+Marker&display=swap"
 			rel="stylesheet"
 		/>
 		<title>Revive the Magic, Spin the Classiscs at astroRecords!</title>
@@ -16,10 +33,16 @@
 		<!-- header -->
 		<header>
 			<a href="/" rel="home">
-				<span role="img" aria-label="music notes">🎶astroRecs</span>
+				<span role="img" aria-label="music notes">🎧astroRecs</span>
 			</a>
 
-			<!-- TODO: add nav -->
+			<nav>
+				{
+					navItems.map((item) => {
+						return <a href={item.path}>{item.label}</a>;
+					})
+				}
+			</nav>
 		</header>
 
 		<!-- TODO: display content -->
@@ -27,8 +50,132 @@
 
 		<!-- footer -->
 		<footer>
-			<a href="https://chrisharley.io">created by Chris Harley</a>
-			<a href="https://github.com/charley81/astroRecs">source code</a>
+			<p>
+				<a href="https://chrisharley.io">created by Chris Harley</a>
+				<a href="https://github.com/charley81/astroRecs">source code</a>
+			</p>
 		</footer>
 	</body>
 </html>
+
+<!-- global styles -->
+<style is:global>
+	:root {
+		--color-primary: #366eb8;
+		--color-light: #ecf0f1;
+		--color-dark: #00151f;
+		--color-grey-dark: #253237;
+		--color-grey-mid: #657880;
+		--color-grey-light: #ecf0f1;
+		--font-family: 'Inter', sans-serif;
+		--font-family-display: 'Permanent Marker', cursive;
+		--border-radius: 24px;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	html {
+		font-family: var(--font-family);
+		font-size: 18px;
+		line-height: 1.45;
+	}
+
+	body {
+		margin: 0;
+	}
+
+	p {
+		color: var(--color-grey-dark);
+	}
+
+	:is(h1, h2, h3, h4, h5, h6) {
+		font-family: var(--font-family-display);
+		line-height: 1.1;
+		margin: 1.5rem 0 0;
+	}
+
+	.block {
+		padding: 3rem max(5vw, calc((100% - 800px) / 2));
+	}
+
+	.big-link {
+		background-color: var(--color-primary);
+		border: 0;
+		border-radius: var(--border-radius);
+		color: var(--color-light);
+		display: inline-block;
+		font-size: 1rem;
+		font-weight: 700;
+		margin: 0.5rem 0 0;
+		padding: 0.5rem 1.25rem;
+		text-decoration: none;
+		transition: 150ms background-color linear;
+	}
+
+	.big-link:hover {
+		background-color: var(--color-grey-dark);
+	}
+
+	.big-link:is(:active, :focus) {
+		outline: 2px solid var(--color-grey-mid);
+		outline-offset: 4px;
+	}
+</style>
+
+<style>
+	/* header */
+	header {
+		align-items: baseline;
+		background-color: var(--color-grey-dark);
+		color: var(--color-light);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+
+	a[rel='home'] {
+		color: inherit;
+		text-decoration: none;
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+
+	nav {
+		display: flex;
+		gap: 1rem;
+	}
+
+	nav a {
+		color: inherit;
+		font-size: 1rem;
+		font-weight: 100;
+		text-decoration: none;
+	}
+
+	/* footer */
+	footer {
+		font-size: 0.75rem;
+		padding: 3rem 5% 2rem;
+	}
+
+	footer p {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+		justify-content: center;
+	}
+
+	footer a {
+		color: var(--color-grey-dark);
+		display: block;
+	}
+
+	@media (min-width: 400px) {
+		header {
+			flex-direction: row;
+		}
+	}
+</style>

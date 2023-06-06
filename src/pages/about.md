@@ -1,3 +1,7 @@
+---
+layout: ../layouts/default.astro
+---
+
 # About astroRecs
 
 Welcome to AstroRecords, your ultimate destination for classic records of all genres! We are a passionate team of music enthusiasts dedicated to preserving the magic of vinyl and sharing the joy of timeless music with our customers.
