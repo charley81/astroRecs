@@ -62,7 +62,7 @@ const navItems = [
 <style is:global>
 	:root {
 		--color-primary: #366eb8;
-		--color-light: #ecf0f1;
+		--color-light: #fafdff;
 		--color-dark: #00151f;
 		--color-grey-dark: #253237;
 		--color-grey-mid: #657880;
@@ -89,6 +89,7 @@ const navItems = [
 
 	img {
 		width: 100%;
+		height: auto;
 	}
 
 	:is(h1, h2, h3, h4, h5, h6) {
@@ -98,7 +99,7 @@ const navItems = [
 	}
 
 	.block {
-		padding: 3rem max(5vw, calc((100% - 800px) / 2));
+		padding: 3rem max(5vw, calc((100% - 1000px) / 2));
 	}
 
 	.big-link {
@@ -106,7 +107,9 @@ const navItems = [
 		border: 0;
 		border-radius: var(--border-radius);
 		color: var(--color-light);
-		display: inline-block;
+		display: block;
+		text-align: center;
+		width: 100%;
 		font-size: 1rem;
 		font-weight: 700;
 		margin: 0.5rem 0 0;
@@ -122,6 +125,10 @@ const navItems = [
 	.big-link:is(:active, :focus) {
 		outline: 2px solid var(--color-grey-mid);
 		outline-offset: 4px;
+	}
+
+	.page a {
+		color: var(--color-primary);
 	}
 </style>
 

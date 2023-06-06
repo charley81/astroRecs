@@ -13,12 +13,7 @@ import CldImage from '../components/CldImage.astro';
 		</div>
 
 		<!-- image -->
-		<CldImage
-			src="astroRecords/record_wv0frc"
-			height="200"
-			width="200"
-			alt="vinyl record"
-		/>
+		<CldImage src="astroRecords/record_lnoicw" alt="vinyl record" />
 	</section>
 </Layout>
 
@@ -26,6 +21,10 @@ import CldImage from '../components/CldImage.astro';
 	section {
 		display: grid;
 		gap: 2rem;
+	}
+
+	.cta p {
+		margin-top: 0.25rem;
 	}
 
 	img {
@@ -48,7 +47,6 @@ import CldImage from '../components/CldImage.astro';
 		}
 
 		.cta p {
-			margin-top: 0.25rem;
 			color: var(--color-grey-mid);
 		}
 	}

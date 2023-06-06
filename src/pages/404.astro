@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/page.astro';
+import CldImage from '../components/CldImage.astro';
+---
+
+<Layout>
+	<div class="not-found">
+		<h1>Sorry, you must be lost. This page doesn't exist</h1>
+		<CldImage src="astroRecords/dog_gpvuid" alt="cute puppy" />
+		<p><a href="/">&larr; back home</a></p>
+	</div>
+</Layout>
+
+<style>
+	.not-found {
+		text-align: center;
+	}
+	img {
+		object-fit: contain;
+		height: 300px;
+	}
+
+	a {
+		color: var(--color-primary);
+	}
+</style>
