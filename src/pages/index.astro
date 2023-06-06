@@ -21,3 +21,35 @@ import CldImage from '../components/CldImage.astro';
 		/>
 	</section>
 </Layout>
+
+<style>
+	section {
+		display: grid;
+		gap: 2rem;
+	}
+
+	img {
+		object-fit: cover;
+		height: auto;
+	}
+
+	@media (min-width: 600px) {
+		section {
+			grid-template-columns: 1fr 1fr;
+			align-items: center;
+		}
+
+		img {
+			order: 1;
+		}
+
+		.cta {
+			order: 2;
+		}
+
+		.cta p {
+			margin-top: 0.25rem;
+			color: var(--color-grey-mid);
+		}
+	}
+</style>
