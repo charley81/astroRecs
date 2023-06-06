@@ -1,7 +1,23 @@
 ---
 import Layout from '../layouts/default.astro';
+import CldImage from '../components/CldImage.astro';
 ---
 
 <Layout>
-	<h1>TODO: build the astroRecs website</h1>
+	<section class="block hero">
+		<!-- info -->
+		<div class="cta">
+			<h1>All Classics, All Vibes</h1>
+			<p class="lede">Revive the Magic, Spin the Classics at AstroRecords!</p>
+			<a href="/shop" class="big-link">Shop Albums</a>
+		</div>
+
+		<!-- image -->
+		<CldImage
+			src="astroRecords/record_wv0frc"
+			height="200"
+			width="200"
+			alt="vinyl record"
+		/>
+	</section>
 </Layout>

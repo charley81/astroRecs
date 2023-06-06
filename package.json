@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@cloudinary/url-gen": "^1.10.1",
     "astro": "^2.5.6"
   },
   "devDependencies": {
