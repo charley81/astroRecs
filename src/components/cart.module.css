@@ -1,8 +1,10 @@
 .cart {
 	font-size: 0.875rem;
 	margin: 2rem 0;
-	position: sticky;
 	top: 1rem;
+	background-color: #fff;
+	padding-bottom: 2rem;
+	height: 100%;
 }
 
 .cart h2 {

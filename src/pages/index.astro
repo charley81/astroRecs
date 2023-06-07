@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/default.astro';
 import CldImage from '../components/clg-image.astro';
+import ShopItems from '../components/shop-items.astro';
 ---
 
 <Layout>
+	<!-- hero -->
 	<section class="block hero">
 		<!-- info -->
 		<div class="cta">
@@ -15,10 +17,16 @@ import CldImage from '../components/clg-image.astro';
 		<!-- image -->
 		<CldImage src="astroRecords/record_lnoicw" alt="vinyl record" />
 	</section>
+
+	<!-- products -->
+	<section class="block products">
+		<ShopItems count={3} addToCart={false} />
+		<p class="shop-link"><a href="/shop">Shop all albums &rarr;</a></p>
+	</section>
 </Layout>
 
 <style>
-	section {
+	.hero {
 		display: grid;
 		gap: 2rem;
 	}
@@ -32,8 +40,17 @@ import CldImage from '../components/clg-image.astro';
 		height: auto;
 	}
 
+	.shop-link {
+		color: var(--color-primary);
+		text-align: center;
+	}
+
+	.shop-link a {
+		color: var(--color-primary);
+	}
+
 	@media (min-width: 600px) {
-		section {
+		.hero {
 			grid-template-columns: 1fr 1fr;
 			align-items: center;
 		}
