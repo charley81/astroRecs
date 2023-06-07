@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/default.astro';
+import ShopItems from '../components/shop-items.astro';
+---
+
+<Layout>
+	<div class="shop block">
+		<h1>Shop Our Albums</h1>
+
+		<noscript>
+			<p>
+				JavaScript must be enabled to use astroRecs online store. To order by
+				phone, call <a href="tel:12484345508">+1 248-434-5508</a>
+			</p>
+		</noscript>
+
+		<div class="products">
+			<!-- cart -->
+			<p>TODO: show cart</p>
+
+			<!-- list -->
+			<ShopItems />
+		</div>
+	</div>
+</Layout>
